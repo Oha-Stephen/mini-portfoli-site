@@ -1,0 +1,105 @@
+.projects{
+    padding-bottom: 2rem;
+    
+        &_bio-image{
+        height: 30vh;
+        width: 100%;
+        background:
+        linear-gradient(
+            to right,
+            rgba($color-1, 0.9),
+            rgba($color-1, 0.31)
+        ),
+         url('../img9.jpg') center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+            .text-secondary{
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+        
+        }
+    
+        &_items{
+            width: 60vw;
+            margin: 2rem auto 0 auto;
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-gap: 2rem;
+    
+        }
+        &_item{
+            position: relative;
+            border-bottom: 5px solid $color-2;
+            overflow: hidden;
+            cursor: pointer;
+
+
+            img{
+                width: 100%;
+            }
+
+            &::after{
+                content: ' ';
+                position: absolute;
+                top: 100%;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: $color-2;
+                opacity: 0;
+                @include transition-ease;
+            }
+
+            &:hover{
+                &::after{
+                    top: 0;
+                    opacity: 0.9;
+                }
+
+                .projects_btn{
+                    opacity: 1;
+
+                    &> .fa{
+                        margin-right: 5px;
+                    }
+                }
+            }    
+        }
+        &_btns{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            text-align: center;
+        }
+        &_btn{
+            opacity: 0;
+            color: set-text-color($color-2);
+            @include transition-ease;
+
+            &:hover{
+                color: set-text-color(set-text-color($color-2));
+                opacity: 1;
+            }
+        }
+
+
+    
+        .social-icons{
+            display: flex;
+            flex-direction: column;
+        }
+    
+        footer{
+            transform:
+            rotate(90deg) translate(-3rem, -5rem);
+        }
+    }

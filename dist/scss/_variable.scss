@@ -1,0 +1,37 @@
+$color-1:#272727;
+$color-2:#fcce04;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin transition-ease{
+  transition: all .7s ease-in-out;
+}
+
+@function set-text-color($color){
+  @if(lightness($color) > 40%){
+    @return  #000;
+  } 
+  @else{
+    @return #fff;
+  }
+}
+
+@mixin media-m{
+  @media screen and (min-width:768px){
+    @content;
+  }
+}
+@mixin media-l{
+  @media screen and (min-width:1024px){
+    @content;
+  }
+}
+@mixin media-xl{
+  @media screen and (min-width:1600px){
+    @content;
+  }
+}

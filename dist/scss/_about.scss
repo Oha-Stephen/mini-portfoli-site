@@ -1,0 +1,66 @@
+.about{
+padding-bottom: 2rem;
+
+    &_bio-image{
+    height: 50vh;
+    width: 100%;
+    background:
+    linear-gradient(
+        to right,
+        rgba($color-1, 0.9),
+        rgba($color-1, 0.31)
+    ),
+     url('../img9.jpg') center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+     p{
+        margin-bottom: 2rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(187, 187, 187);
+     }
+    
+    }
+    &_bio{
+        width: 80%;
+        text-align: center;
+
+        .text-secondary{
+            padding-bottom: 1rem;
+        }
+    }
+
+    .jobs{
+        width: 60vw;
+        margin: 2rem auto 0 auto;
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-gap: 2rem;
+
+        &_job{
+            background: lighten($color-1, 10%);
+            padding: 1.2rem;
+            border-bottom: 3px solid $color-2;
+
+            h2,h3{
+                margin: .6rem 0;
+            }
+            h6{
+                margin: .4rem 0;
+            }
+        }
+    }
+
+    .social-icons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer{
+        transform:
+        rotate(90deg) translate(-3rem, -5rem);
+    }
+}
