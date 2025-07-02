@@ -42,7 +42,7 @@
 .menu-btn_burger::after {
   content: ' ';
   position: absolute;
-  top: 7px;
+  top: 8px;
   width: 20px;
   height: 3px;
   background: #fff;
